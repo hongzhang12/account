@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC35906F1C7163BB00110052 /* ZHTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FC35906E1C7163BB00110052 /* ZHTest.m */; };
 		FC9AE7551C706D8600772035 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9AE7541C706D8600772035 /* main.m */; };
 		FC9AE7581C706D8600772035 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9AE7571C706D8600772035 /* AppDelegate.m */; };
 		FC9AE75B1C706D8600772035 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9AE75A1C706D8600772035 /* ViewController.m */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC35906D1C7163BB00110052 /* ZHTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHTest.h; sourceTree = "<group>"; };
+		FC35906E1C7163BB00110052 /* ZHTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHTest.m; sourceTree = "<group>"; };
 		FC9AE7501C706D8600772035 /* Account.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Account.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC9AE7541C706D8600772035 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FC9AE7561C706D8600772035 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -107,6 +110,8 @@
 				FC9AE7611C706D8600772035 /* LaunchScreen.storyboard */,
 				FC9AE7641C706D8600772035 /* Info.plist */,
 				FC9AE7531C706D8600772035 /* Supporting Files */,
+				FC35906D1C7163BB00110052 /* ZHTest.h */,
+				FC35906E1C7163BB00110052 /* ZHTest.m */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC9AE75B1C706D8600772035 /* ViewController.m in Sources */,
+				FC35906F1C7163BB00110052 /* ZHTest.m in Sources */,
 				FC9AE7581C706D8600772035 /* AppDelegate.m in Sources */,
 				FC9AE7551C706D8600772035 /* main.m in Sources */,
 			);
