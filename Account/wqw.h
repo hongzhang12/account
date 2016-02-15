@@ -11,5 +11,5 @@
 @interface wqw : UIView
 //demo
 
-//dddddd
+
 @end
