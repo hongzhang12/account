@@ -1,5 +1,5 @@
 //
-//  ZHTest.h
+//  wqw.h
 //  Account
 //
 //  Created by zhanghong on 16/2/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZHTest : UIView
-//sasasasasa
+@interface wqw : UIView
+
 @end
