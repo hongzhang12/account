@@ -16,6 +16,7 @@
 		FC9AE7631C706D8600772035 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC9AE7611C706D8600772035 /* LaunchScreen.storyboard */; };
 		FC9AE76E1C706D8600772035 /* AccountTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9AE76D1C706D8600772035 /* AccountTests.m */; };
 		FC9AE7791C706D8600772035 /* AccountUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9AE7781C706D8600772035 /* AccountUITests.m */; };
+		FCD08D261C7303AE006BB16C /* bug.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD08D251C7303AE006BB16C /* bug.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		FC9AE7741C706D8600772035 /* AccountUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccountUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC9AE7781C706D8600772035 /* AccountUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountUITests.m; sourceTree = "<group>"; };
 		FC9AE77A1C706D8600772035 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCD08D241C7303AE006BB16C /* bug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bug.h; sourceTree = "<group>"; };
+		FCD08D251C7303AE006BB16C /* bug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bug.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				FC9AE7531C706D8600772035 /* Supporting Files */,
 				FC35906D1C7163BB00110052 /* ZHTest.h */,
 				FC35906E1C7163BB00110052 /* ZHTest.m */,
+				FCD08D241C7303AE006BB16C /* bug.h */,
+				FCD08D251C7303AE006BB16C /* bug.m */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCD08D261C7303AE006BB16C /* bug.m in Sources */,
 				FC3590721C71AE6B00110052 /* wqw.m in Sources */,
 				FC9AE75B1C706D8600772035 /* ViewController.m in Sources */,
 				FC35906F1C7163BB00110052 /* ZHTest.m in Sources */,
