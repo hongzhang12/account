@@ -30,6 +30,10 @@
     return self;
 }
 
+- (void)dealloc{
+    
+    [self.panGesture removeTarget:self action:@selector(panGestureUpdated:)];
+}
 
 - (void)startInteractiveTransition:(id<UIViewControllerContextTransitioning>)transitionContext{
     
@@ -39,12 +43,13 @@
 
 - (CGFloat)percentForGesture:(UIPanGestureRecognizer *)gesture
 {
-        CGFloat x = [gesture translationInView:gesture.view].x;
-    
-        if (self.isPresented == NO) x = -x;
-    
-        if (x < 0) x = 0;
-        if (x > 100) x = 100;
+    CGFloat x = [gesture translationInView:[UIApplication sharedApplication].keyWindow].x;
+
+    NSLog(@"%f",x);
+    if (self.isPresented == NO) x = -x;
+
+    if (x < 0) x = 0;
+    if (x > 100) x = 100;
     
     return x/100;
 }
@@ -54,11 +59,9 @@
     UIGestureRecognizerState state = panGesture.state;
 //    NSLog(@"%@",NSStringFromCGPoint([panGesture translationInView:panGesture.view]));
     
-
-    
     CGFloat percent = [self percentForGesture:panGesture];
     
-    NSLog(@"%f", percent);
+//    NSLog(@"%f", percent);
     
     switch (state) {
         case UIGestureRecognizerStateChanged:
@@ -68,17 +71,20 @@
             
         case UIGestureRecognizerStateEnded:
             
-            [self finishInteractiveTransition];
-//            self.panGesture = nil;
-//            [self.panGesture removeTarget:self action:@selector(panGestureUpdated:)];
+            if (percent>0.5) {
+                
+                [self finishInteractiveTransition];
+            }else{
+                
+                [self cancelInteractiveTransition];
+            }
             
             break;
             
         case UIGestureRecognizerStateCancelled:
             
             [self cancelInteractiveTransition];
-//            self.panGesture = nil;
-//            [self.panGesture removeTarget:self action:@selector(panGestureUpdated:)];
+
             break;
             
         default:

@@ -17,18 +17,21 @@
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext{
     
+    // toView和toViewController在presented和dismissed时都是即将呈现在屏幕上的那个。
+    // 在presented时，fromView是PresentedView,toView是presentingView。
+    // 在dismissed时，fromView是presentingView,toView是PresentedView。
     UIView *fromView = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey].view;
     UIView *toView = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey].view;
     UIView *containerView = [transitionContext containerView];
     
-    toView.frame = CGRectMake(100, 100, 200, 200);
+    toView.frame = fromView.bounds;
     toView.alpha = 0.1;
     toView.transform = CGAffineTransformMakeScale(0.1, 0.1);
     
     // 必须把即将呈现的view添加到containerView
     [containerView addSubview:toView];
     
-    [UIView animateWithDuration:[self transitionDuration:transitionContext] delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:0 options:UIViewAnimationOptionCurveLinear animations:^{
+    [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
         
         toView.alpha = 1;
         toView.transform = CGAffineTransformIdentity;

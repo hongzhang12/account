@@ -26,12 +26,20 @@
 
 - (id<UIViewControllerInteractiveTransitioning>)interactionControllerForPresentation:(id<UIViewControllerAnimatedTransitioning>)animator{
     
-    return [[ZHPercentDrivenInteractiveTransition alloc] initWithPanGesture:self.panGesture andIsPresented:YES];
+    if (self.panGesture) {
+        
+        return [[ZHPercentDrivenInteractiveTransition alloc] initWithPanGesture:self.panGesture andIsPresented:YES];
+    }
+    return nil;
 }
 
 - (id<UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id<UIViewControllerAnimatedTransitioning>)animator{
     
-    return [[ZHPercentDrivenInteractiveTransition alloc] initWithPanGesture:self.panGesture andIsPresented:NO];
+    if (self.panGesture) {
+        
+        return [[ZHPercentDrivenInteractiveTransition alloc] initWithPanGesture:self.panGesture andIsPresented:NO];
+    }
+    return nil;
 }
 
 @end
