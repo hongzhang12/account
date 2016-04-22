@@ -216,27 +216,51 @@ import Foundation
 
 
 
-var array1 = Array<String>()
-var array2 = Array<String>(count: 10, repeatedValue: "zz")
-var array3 = [String](count: 100, repeatedValue: "xx")
-var array4 = Array(1...100)
-var array5 = ["111" ,"222" ,"333" ,"444" ,"555" ,"666" ,"777"]
+//var array1 = Array<String>()
+//var array2 = Array<String>(count: 10, repeatedValue: "zz")
+//var array3 = [String](count: 100, repeatedValue: "xx")
+//var array4 = Array(1...100)
+//var array5 = ["111" ,"222" ,"333" ,"444" ,"555" ,"666" ,"777"]
+//
+//print(array5.count)
+//
+//var dic1 = Dictionary<String ,String>()
+//var dic2 = [String :String]()
+//dic2 = ["xx" :"1" ,"ssd" :"2"]
+//dic2["ww"] = "3"
+//dic2["ww"] = "4"
+//print(dic2["ww"])
+//
+//
+//func add(name:String = "张洪",age:Int...) -> (Int ,String){
+//    
+//    return (5 ,"ssss")
+//}
 
-print(array5.count)
-
-var dic1 = Dictionary<String ,String>()
-var dic2 = [String :String]()
-dic2 = ["xx" :"1" ,"ssd" :"2"]
-dic2["ww"] = "3"
-dic2["ww"] = "4"
-print(dic2["ww"])
-
-
-func add(name:String = "张洪",age:Int...) -> (Int ,String){
+enum LEVEL {
     
-    return (5 ,"ssss")
+    case LEVELMASTER
+    case LEVELFAMILIAR
+    case LEVELNEWHAND
 }
 
+enum CODER {
+    
+    case iOS (String ,Int ,LEVEL)
+    case Android (String ,Int ,LEVEL)
+    case PHP (String ,Int ,LEVEL)
+}
 
+let zhangHong = CODER.iOS("zhanghong", 23, LEVEL.LEVELFAMILIAR)
 
+let xiangXiuHua = CODER.Android("xiangxiuhua", 25, LEVEL.LEVELFAMILIAR)
+
+switch zhangHong{
+    
+    case CODER.iOS: print("an iOS developer")
+        
+    case CODER.Android(let name ,let age ,let level): print("an android developer" ,name ,age ,level)
+    
+    default: break
+}
 

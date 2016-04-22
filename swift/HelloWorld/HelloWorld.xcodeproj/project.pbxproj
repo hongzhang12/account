@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC0263391CB4EBC400274ADE /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0263381CB4EBC400274ADE /* CoreFoundation.framework */; };
+		FC02633B1CB4EC8000274ADE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC02633A1CB4EC8000274ADE /* Foundation.framework */; };
 		FC341FFE1C9906CE008BAD57 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC341FFD1C9906CE008BAD57 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +25,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FC0263381CB4EBC400274ADE /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		FC02633A1CB4EC8000274ADE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FC20F1561CA8D10700D7D92A /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		FC341FFA1C9906CE008BAD57 /* HelloWorld */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HelloWorld; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC341FFD1C9906CE008BAD57 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -32,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC02633B1CB4EC8000274ADE /* Foundation.framework in Frameworks */,
+				FC0263391CB4EBC400274ADE /* CoreFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +48,8 @@
 		FC341FF11C9906CE008BAD57 = {
 			isa = PBXGroup;
 			children = (
+				FC02633A1CB4EC8000274ADE /* Foundation.framework */,
+				FC0263381CB4EBC400274ADE /* CoreFoundation.framework */,
 				FC341FFC1C9906CE008BAD57 /* HelloWorld */,
 				FC341FFB1C9906CE008BAD57 /* Products */,
 			);
@@ -58,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				FC341FFD1C9906CE008BAD57 /* main.swift */,
+				FC20F1561CA8D10700D7D92A /* MyPlayground.playground */,
 			);
 			path = HelloWorld;
 			sourceTree = "<group>";
@@ -209,14 +219,25 @@
 		FC3420021C9906CE008BAD57 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/;
+				GCC_PREFIX_HEADER = /Users/zhanghong/Desktop/Account1/account/swift/HelloWorld/HelloWorld/PrefixHeader.pch;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HelloWorld/HelloWorld-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		FC3420031C9906CE008BAD57 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/;
+				GCC_PREFIX_HEADER = /Users/zhanghong/Desktop/Account1/account/swift/HelloWorld/HelloWorld/PrefixHeader.pch;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HelloWorld/HelloWorld-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -239,6 +260,7 @@
 				FC3420031C9906CE008BAD57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
